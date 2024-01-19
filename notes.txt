@@ -1,0 +1,57 @@
+PERSONNEL
+Diane C Whited - run the risk model, run the algal bloom classifier
+Nanette - lead?
+john kimball - ?
+matt church - ?
+
+
+WHAT GOES ON THE MAP
+
+algal surveys (photos)
+	maybe doesnt go on website
+sat imagery
+	processed by diane whited
+	use the images to verify the septic risk models
+groundwater surveys
+septic risk map
+	how is what we're doing different from this?
+		it's for lake county, whereas flathead county already has it
+
+
+and this needs to be packageable, so other counties can build their own
+
+sat imagery
+	need to purchase, so i'd have to build a spot for this to plug in
+groundwater surveys
+	definitely a bell or whistle. probs can leave off
+septic risk map
+	n/a
+
+
+risk model inputs
+	location of septic systems
+	presumably location of waterbodies? 
+	slope (? nanette thinks so, but diane didn't mention), soil type (nanette says) or geology (diane says), depth to groundwater, distance to surface water, septic age
+	is this computation heavy? - probs not
+	is it automatable? or do you need local knowledge?
+	Ryan Richardson made the risk model
+	output: color representing risk. by cell?
+
+
+classification inputs:
+	just satellite layer
+	pleiades group has the high res thing (1.2m) but this has a fee
+		see if it has an api
+	users will either need to plug in a pleiades layer or...
+	sentinel 2 is on earth engine. that's 10m. could maybe use it. diane wants to try using that for flathead lake
+		chla or vegetation index
+		if it works there, could work elsewhere. or other groups might just want to try it.
+		so i'd need to build separate modules for this and for pleiades
+	up to three different classification algorithms depending on lake bottom type
+		that's a user input. don't need to derive programmatically
+
+
+VISION FOR THE WEBSITE
+	the sensors should appear on the map and be green if the're chill, or orange to red if a bloom is happening
+	show the locations for septic. these are in hand for flathead county, not for lake
+	land layers in clude the four basic layers of the risk model
